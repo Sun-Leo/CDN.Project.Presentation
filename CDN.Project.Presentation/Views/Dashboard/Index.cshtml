@@ -1,0 +1,28 @@
+﻿@model List<AppUser>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/Admin_Layout.cshtml";
+}
+<br /> <br />
+
+
+    <div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-lg-3 col-sm-6">
+            <div class="card">
+                <div class="card-body">
+                    <div class="text-center">
+@*                         <img src="~/adminApi/theme/images/users/8.jpg" class="rounded-circle" alt="">
+ *@                        <h5 class="mt-3 mb-1">@item.Name @item.Surname</h5>
+                        <p class="m-0">@item.Email</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    }
+    </div>
+
+
+
